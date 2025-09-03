@@ -1,10 +1,9 @@
-Ce petit projet personnel est réalisé dans le cadre de ma montée en compétence en code.
-Je souhaite créditer GreenPeace, site sur lequel je récupère les informations sur la saisonalité des légumes, fruits et céréales : https://www.greenpeace.fr/guetteur/calendrier/
+Ce petit projet personnel a été réalisé dans le cadre de ma montée en compétences en programmation.
+Je tiens à créditer Greenpeace, dont je me suis appuyé sur le calendrier de saisonnalité des légumes, fruits et céréales (https://www.greenpeace.fr/guetteur/calendrier/).
 
-Le but de cette application est de vous permettre de vérifier quand vos recettes sont réalisables dans l'année en fonction de la saisonalité des ingrédients.
-Pour cette V1 j'ai tout réalisé sous python sans interface, il faudra installer Python 3 et utiliser la console pour pouvoir profiter de l'application.
+L’objectif de cette application est de vérifier à quels moments de l’année vos recettes sont réalisables en fonction de la saisonnalité des ingrédients.
+Pour cette V1, tout est développé en Python (sans interface graphique) : il suffit donc d’installer Python 3 et d’utiliser la console pour l’exécuter.
 
-J'envisage de mettre à jour cette application au fur et à mesure de ma progression en code (Web, React etc.)
+Je prévois de faire évoluer cette application au fur et à mesure de ma progression (ex. ajout d’une interface web avec React).
 
-Merci,
-Enjoy.
+Merci et bon test !
