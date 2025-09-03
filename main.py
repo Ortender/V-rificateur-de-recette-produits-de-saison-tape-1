@@ -12,7 +12,7 @@ if __name__ == '__main__':
     list_ingredient = Extraction_Calendrier_et_ingredients.get_ingredient(Calendar)
 
     user_interaction.welcome_message()
-    #Nous affichons les menu de choix à l'utilisateur
+    #Nous affichons le menu de choix à l'utilisateur
     user_choice=user_interaction.menu()
     #En fonction du choix de l'utilisateur nous réalisons l'action désirée
     Realisation_des_actions.Action_user_choice(user_choice, Calendar, list_ingredient)

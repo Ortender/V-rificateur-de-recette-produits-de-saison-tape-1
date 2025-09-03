@@ -10,7 +10,7 @@ def get_html_code(url):
 
 #fonction permettant d'extraire du code html le calendrier
 def get_calendar(page_element):
-    #le calendrier sera contenu dans une liste de dictionnaire (ingrédients : mois)
+    #le calendrier sera contenu dans une liste de dictionnaire (ingrédients, mois)
     Calendar =[]
     #le calendrier dans la page html est organisé par article, nous parcourons chacun de ces articles
     for month_and_ingredient in page_element.find_all('article', class_='list-items'):
@@ -21,9 +21,6 @@ def get_calendar(page_element):
             couple_Month_ingredient = {}
             ingredient_clean = ingredient.string
             #la fonction .string renvoie le nom de l'ingrédient mais pollué de \n et \t que nous devons retirer
-            #activer la ligne suivante si l'on souhaite le calendrier organisé par mois
-            '''couple_Month_ingredient[month]=(ingredient_clean.strip('\n\t\t\t\t'))'''
-            #activer la ligne suivante si l'on souhaite le calendrier organisé par ingrédients
             couple_Month_ingredient['Ingrédient']=ingredient_clean.strip('\n\t\t\t\t')
             couple_Month_ingredient['Mois']=(month)
             Calendar.append(couple_Month_ingredient)

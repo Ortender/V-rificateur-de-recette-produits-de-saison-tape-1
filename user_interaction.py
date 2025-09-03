@@ -17,13 +17,13 @@ def menu():
         user_choice = input("Choix invalide. Entrez votre choix (1-5) : ")
     return user_choice
 
-#fonction pour récupérer la liste des ingrédients de la recette de l'utilisateur et vérifier qu'elle pourra être comparé avec la liste du calendrier
+#fonction pour récupérer la liste des ingrédients de la recette de l'utilisateur et vérifier qu'elle pourra être comparée avec la liste du calendrier
 def get_recipe(list_ingredient):
     #Nous demandons à l'utilisateur la liste des ingrédients qui composent sa recette et la stockons dans une liste
     user_recipe = input('Veuillez fournir la liste de vos ingrédients séparés par une virgule et sans espace (exemple: Potiron,Carotte,Brocoli) ')
     recipe = user_recipe.split(',')
     recipe_clean=[]
-    #Nous vérifions que la liste d'ingrédient fourni par l'utilisateur est bien présente dans la base de données GreenPeace (en respectant la casse)
+    #Nous vérifions que la liste d'ingrédients fournie par l'utilisateur est bien présente dans la base de données GreenPeace (en respectant la casse)
     for ingredient in recipe:
         while ingredient not in list_ingredient:
             print(f"\033[31m{ingredient} n'est pas reconnu comme un ingrédient valide, veuillez l'écrire correctement.\033[0m")

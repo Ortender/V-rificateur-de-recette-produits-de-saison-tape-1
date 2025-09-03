@@ -33,7 +33,7 @@ def Action_user_choice(user_choice, Calendar, list_ingredient):
         case '2':
             #le choix 2 permet d'afficher la liste des ingrédients de la BD
             Extraction_Calendrier_et_ingredients.display_ingredient_list(list_ingredient)
-        #les choix 3 et 4 permettent de créer un fichier CSV contenant le calendrier soit classés par mois, soit par ingrédient. L'inversion des colonnes permet de choisir la clefs d'entrée de cette "base de données"
+        #les choix 3 et 4 permettent de créer un fichier CSV contenant le calendrier soit classé par mois, soit par ingrédient. L'inversion des colonnes permet de choisir la clefs d'entrée de cette "base de données"
         case '3':
             column1 = "Ingrédient"
             column2 = "Mois"
