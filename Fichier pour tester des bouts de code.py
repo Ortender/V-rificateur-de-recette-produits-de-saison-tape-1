@@ -2,8 +2,6 @@
 
 import requests
 from bs4 import BeautifulSoup
-import re
-import csv
 
 url = "https://www.greenpeace.fr/guetteur/calendrier/"
 reponse = requests.get(url)
