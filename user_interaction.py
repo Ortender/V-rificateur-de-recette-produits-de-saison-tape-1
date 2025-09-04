@@ -4,7 +4,7 @@ def welcome_message():
 #Fonction présentant les choix d'actions possibles à l'utilisateur
 def menu():
     print("1. Vérifier la saisonalité d'une recette")
-    print("2. Consulter la liste des ingrédients référencés (Attention la casse doit être respectée)")
+    print("2. Consulter la liste des ingrédients référencés")
     print("3. Extraire le calendrier des ingrédients au format CSV, classé par ingrédient")
     print("4. Extraire le calendrier des ingrédients au format CSV, classé par mois")
     print("5. Quitter")
@@ -21,15 +21,18 @@ def menu():
 def get_recipe(list_ingredient):
     #Nous demandons à l'utilisateur la liste des ingrédients qui composent sa recette et la stockons dans une liste
     user_recipe = input('Veuillez fournir la liste de vos ingrédients séparés par une virgule et sans espace (exemple: Potiron,Carotte,Brocoli) ')
-    recipe = user_recipe.split(',')
+    recipe_raw = user_recipe.split(',')
+    recipe_standardized=[]
+    for ingredient in recipe_raw:
+        recipe_standardized.append(ingredient.casefold())
     recipe_clean=[]
     #Nous vérifions que la liste d'ingrédients fournie par l'utilisateur est bien présente dans la base de données GreenPeace (en respectant la casse)
-    for ingredient in recipe:
+    for ingredient in recipe_standardized:
         while ingredient not in list_ingredient:
             print(f"\033[31m{ingredient} n'est pas reconnu comme un ingrédient valide, veuillez l'écrire correctement.\033[0m")
-            #Si l'ingrédient n'est pas présent dans la BD, c'est peut-être du à la casse, nous proposons alors à l'utilisateur de consulter la liste des ingrédients de la BD
-            Display_list=input("Voulez-vous voir la liste des ingrédients valide?\n Tapez 'oui' ou 'non': \n")
-            if Display_list == "oui":
+            #Si l'ingrédient n'est pas présent dans la BD, c'est peut-être une erreur d'orthographe, nous proposons alors à l'utilisateur de consulter la liste des ingrédients de la BD
+            display_list=input("Voulez-vous voir la liste des ingrédients valide?\n Tapez 'oui' ou 'non': \n")
+            if display_list == "oui":
                 for i in list_ingredient:
                     print(i)
                 ingredient_not_found=input("Avez-vous trouvé votre ingrédient dans la liste?\n Tapez 'oui' ou 'non': \n")
