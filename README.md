@@ -21,7 +21,7 @@ Here’s what I worked on in this project:
 - Extracting data from a webpage using **Python** and **HTML tags**
 - Practicing **basic Python programming**, table manipulations, conditions, and loops
 - Anticipating **user experience** challenges and finding ways to improve navigation despite a simple console interface  
-  *(For example, ingredient inputs are case-insensitive, but I don’t yet handle typos or spaces. The user must type the ingredient exactly as listed in the calendar — something I plan to improve in a future web app version.)*
+  *(For example, ingredient inputs are not case-insensitive, but I don’t yet handle typos or spaces. The user must type the ingredient exactly as listed in the calendar — something I plan to improve in a future web app version.)*
 
 ---
 
